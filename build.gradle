@@ -33,11 +33,3 @@ test {
 	useJUnitPlatform()
 }
 
-jar {
-	manifest {
-		attributes(
-			'Main-Class': 'com.example.demo.Application',
-			'Class-Path': configurations.runtimeClasspath.collect { it.getName() }.join(' ')
-		)
-	}
-}
